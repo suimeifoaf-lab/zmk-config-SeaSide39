@@ -99,7 +99,7 @@
 
 &kp Z             &kp X      &kp C         &kp V             &kp B                                                &kp N            &kp M  &kp K   &kp K   &kp K 
 
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &lt 1 LANG1  &kp SPACE  &lt 2 LANG2      &kp BACKSPACE  &lt 3 ENTER                             &lt 5 ESCAPE
+&kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &mt LEFT_SHIFT LANG1  &kp SPACE  &lt 2 LANG2      &kp BACKSPACE  &lt 3 ENTER                             &lt 5 ESCAPE
 
             >;
 
