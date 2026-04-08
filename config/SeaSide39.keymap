@@ -11,14 +11,7 @@
 #define SCROLL  4
 
 / {
-    /* トラックボール設定: 0.6秒で復帰 ＆ スクロール対応 */
-    &trackball {
-        input-processors = 
-            <&zi_temp_layer MOUSE 600>, 
-            <&zi_scroll_layer SCROLL>;
-    };
-
-    /* カスタム挙動の調整（必要に応じて） */
+    /* カスタム挙動の定義 */
     behaviors {
         // 中井さん仕様の300msタップ
         mt_n: mod_tap_nakai {
@@ -56,7 +49,7 @@
             >;
         };
 
-        /* LAYER 2: NUM & SYMBOL (44キーの配置を移植) */
+        /* LAYER 2: NUM & SYMBOL */
         num_sym_layer {
             bindings = <
     &kp N7     &kp N8     &kp N9     &none      &none                         &none      &none      &kp LBKT   &kp RBKT   &none
@@ -67,7 +60,7 @@
             >;
         };
 
-        /* LAYER 3: CONFIG (接続設定など) */
+        /* LAYER 3: CONFIG */
         config_layer {
             bindings = <
     &bt BT_CLR &none      &none      &none      &none                         &none      &none      &none      &none      &none
@@ -78,7 +71,7 @@
             >;
         };
 
-        /* LAYER 4: SCROLL (ボールをスクロールに変える魔法のレイヤー) */
+        /* LAYER 4: SCROLL */
         scroll_layer {
             bindings = <
     &trans     &trans     &trans     &trans     &trans                        &trans     &trans     &trans     &trans     &trans
@@ -89,4 +82,11 @@
             >;
         };
     };
+};
+
+/* 参照（&）を使った設定はルートノードの外に書く */
+&trackball {
+    input-processors = 
+        <&zi_temp_layer MOUSE 600>, 
+        <&zi_scroll_layer SCROLL>;
 };
