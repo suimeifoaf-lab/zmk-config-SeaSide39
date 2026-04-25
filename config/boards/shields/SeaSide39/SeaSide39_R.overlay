@@ -23,6 +23,15 @@
         17  // MB3
         18  // MB2
         19  // mo 5 (SCROLLレイヤー)
+        30  // LCTRL
+        31  // LEFT_ALT
+        32  // LEFT_WIN
+        // 33 mt LEFT_SHIFT LANG2 → タップ時のみ解除
+        // 34 lt 1 SPACE          → タップ時のみ解除
+        // 35 lt 2 LANG1          → タップ時のみ解除
+        // 36 BACKSPACE → AML解除
+        // 37 lt 3 ENTER → AML解除
+        // 38 lt 4 ESCAPE → AML解除
     >;
 
     require-prior-idle-ms = <200>;
@@ -33,7 +42,6 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        /* タイムアウトは長めに設定（クリック後の挙動はmkp_input_listenerで制御） */
         input-processors = <&zip_temp_layer 4 100000>;
     };
 };
@@ -76,7 +84,6 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        /* automouse-layer は Input Processor に移行したため削除 */
         scroll-layers = <5>;
     };
 };
