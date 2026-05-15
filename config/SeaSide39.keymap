@@ -115,7 +115,7 @@
 &trans  &trans  &kp ENTER  &trans  &trans                                     &trans            &trans        &trans           &trans  &trans
 &trans  &trans  &trans     &trans  &trans                                     &trans            &kp LG(LS(TAB))        &trans           &kp LG(TAB)  &trans
 &trans  &trans  &trans     &trans  &trans                                     &trans            &trans        &trans           &trans  &trans
-&trans  &trans  &trans     &trans  &kp LS(LG(N5))  &kp LS(LG(N4))      &kp LC(DOWN)  &kp LC(UP_ARROW)          &trans
+&trans  &trans  &trans     &trans  &kp LS(LG(N5))  &kp LS(LG(N4))      &kp LC(DOWN)  &kp LC(UP_ARROW)          &bt BT_CLR_ALL 
             >;
         };
 
